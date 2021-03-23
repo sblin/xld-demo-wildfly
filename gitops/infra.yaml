@@ -1,0 +1,22 @@
+---
+apiVersion: xl-deploy/v1
+kind: Infrastructure
+spec:
+- directory: Infrastructure/JBoss
+  children:
+  - name: local-vm
+    type: overthere.SshHost
+    os: UNIX
+    temporaryDirectoryPath: /tmp
+    stagingDirectoryPath: /tmp
+    address: 192.168.78.2
+    username: demo
+    password: admin
+    children:
+    - name: WildflyStandalone
+      type: jbossdm.StandaloneServer
+      home: /opt/wildfly
+      port: 9990
+      adminHostAddress: 192.168.78.2
+      username: admin123
+      password: password!1
