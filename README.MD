@@ -73,4 +73,6 @@ To import the Digital.ai elements run the following command:
 ## Import the PetClinic.ear app (from the server)
 
 ## Deploy the app.
+![deploy](images/deploy.png)
+
 
